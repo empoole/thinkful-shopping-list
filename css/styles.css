@@ -1,0 +1,113 @@
+/*Helper rules*/
+
+div {
+	border: 1px solid chocolate;
+}
+
+section {
+	border: 1px solid steelblue;
+}
+
+/*End helper rules*/
+
+ul {
+	list-style: none;
+}
+
+.header,
+.footer,
+.section-heading {
+	text-align: center;
+}
+
+.header-text {
+	/*font etx*/
+}
+
+.content-wrapper {
+	width: 60%;
+	margin: auto;
+}
+
+.align-left,
+.align-right {
+	width: 50%;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.align-left {
+	float: left;
+}
+
+/*ADD ITEM*/
+
+.add-item {
+	width: 65%;
+	margin: auto;
+}
+
+.add-item-controls {
+	display: block;
+	padding: 5px 10px;
+}
+
+.add-input {
+	display: block;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	width: 100%;
+	box-sizing: border-box; 
+
+	border: 1px solid grey;
+}
+
+/*BUTTONS*/
+
+.button-add,
+.button-reset,
+.button-remove-item {
+	padding: 10px 15px;
+	color: white;
+	font-weight: bold;
+	font-family: sans-serif;
+	border: none;
+	border-radius: 5px;
+}
+
+.button-add {
+	
+}
+
+.button-reset {
+	float: right;
+}
+
+.button-remove-item {
+	float: right;
+	margin-top: 7px;
+}
+
+/*LIST*/
+
+.list {
+	margin: auto;
+}
+
+.shopping-list-item p,
+.shopping-list-item button {
+	display: inline-block;
+	padding-right: 15px;
+}
+
+/*FOOTER*/
+
+.footer {
+	background-color: steelblue;
+}
+
+.footer-text {
+	font-size: .75em;
+	color: white;
+}

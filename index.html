@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping List</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<header class="header">
+		<h1 class="header-text">Shopping List</h1>
+	</header>
+	<div class="content-wrapper">
+		<section class="align-left">
+			<h2 class="section-heading">Add Item</h2>
+			<div class="add-item">
+				<label for="item">Item: </label>
+				<input type="text" id="item" class="add-input">
+				<label for="quantity">Quantity: </label>
+				<input type="number" id="quantitiy" class="add-input">
+				<label for="price">Price: </label>
+				<input type="text" id="price" class="add-input">
+				<div class="add-item-controls">
+					<button class="button-add">Add</button>
+					<button class="button-reset">Reset</button>
+				</div>
+			</div>
+		</section>
+		<section class="align-right">
+			<h2 class="section-heading">Your List</h2>
+			<ul class="list">
+				<li>
+					<div class="shopping-list-item">
+						<p class="item-name">Noodles</p>
+						<p class="item-quantity">x6</p>
+						<p class="item-total-price">$6.00</p>
+						<button class="button-remove-item">X</button>
+					</div>
+				</li>
+				<li>
+						<div class="shopping-list-item">
+						<p class="item-name">Eggs</p>
+						<p class="item-quantity">x12</p>
+						<p class="item-total-price">$5.00</p>
+						<button class="button-remove-item">X</button>
+					</div>
+				</li>
+				<li>
+						<div class="shopping-list-item">
+						<p class="item-name">Tea</p>
+						<p class="item-quantity">x1</p>
+						<p class="item-total-price">$3.00</p>
+						<button class="button-remove-item">X</button>
+					</div>
+				</li>
+				<li>
+						<div class="shopping-list-item">
+						<p class="item-name">Steak</p>
+						<p class="item-quantity">x2</p>
+						<p class="item-total-price">$18.00</p>
+						<button class="button-remove-item">X</button>
+					</div>
+				</li>
+				<li>
+						<div class="shopping-list-item">
+						<p class="item-name">Chicken</p>
+						<p class="item-quantity">x4</p>
+						<p class="item-total-price">$13.00</p>
+						<button class="button-remove-item">X</button>
+					</div>
+				</li>
+			</ul>
+			<h3 class="total">Total: $45</h3>
+		</section>
+	</div>
+	<footer class="footer">
+		<p class="footer-text">&copy; 2015 Eric Poole</p>
+	</footer>
+</body>
+</html>
