@@ -1,14 +1,8 @@
-/*Helper rules*/
-
-div {
-	border: 1px solid chocolate;
+html,
+body {
+	background-color: #5B9DCC;
+	font-family: 'Lato', Helvetica, sans-serif;
 }
-
-section {
-	border: 1px solid steelblue;
-}
-
-/*End helper rules*/
 
 ul {
 	list-style: none;
@@ -21,18 +15,25 @@ ul {
 }
 
 .header-text {
-	/*font etx*/
+	color: #FBFBFB;
+	font-size: 3em;
 }
 
 .content-wrapper {
 	width: 60%;
+	height: 650px;
 	margin: auto;
+	background-color: #FBFBFB;
+	border-radius: 5px;
+
 }
 
 .align-left,
 .align-right {
 	width: 50%;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
 	display: inline-block;
 }
 
@@ -45,6 +46,7 @@ ul {
 .add-item {
 	width: 65%;
 	margin: auto;
+	padding: 10px
 }
 
 .add-item-controls {
@@ -58,9 +60,13 @@ ul {
 	margin-bottom: 20px;
 	padding: 5px 10px;
 	width: 100%;
-	box-sizing: border-box; 
-
-	border: 1px solid grey;
+	height: 52px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #F5F5F5;
+	font-size: 1.35em;
+	border: 1px solid #E4E4E6;
 }
 
 /*BUTTONS*/
@@ -77,22 +83,44 @@ ul {
 }
 
 .button-add {
-	
+	background-color: #48AD45;
+	text-shadow: -1px -1px #2D6D2C;
+	box-shadow: 3px 3px 0px 1px #2D6D2C;
+}
+
+.button-add:hover {
+	background-color: #388736;
+	box-shadow: 2px 2px 0px 1px #2D6D2C;
 }
 
 .button-reset {
 	float: right;
+	background-color: #0986CC;
+	text-shadow: -1px -1px #12587F;
+	box-shadow: 3px 3px 0px 1px #12587F;
+}
+
+.button-reset:hover {
+	background-color: #0875B2;
+	box-shadow: 2px 2px 0px 1px #12587F;
 }
 
 .button-remove-item {
 	float: right;
 	margin-top: 7px;
+	background-color: #CC1D27;
+}
+
+.button-remove-item:hover {
+	background-color: #B21922;
 }
 
 /*LIST*/
 
 .list {
 	margin: auto;
+	padding: 0 10px;
+
 }
 
 .shopping-list-item p,
@@ -101,10 +129,26 @@ ul {
 	padding-right: 15px;
 }
 
+.shopping-list-item {
+	margin: 10px 0;
+	padding: 0 10px;
+	border-radius: 5px;
+	background-color: #F5F5F5;
+	box-shadow: 1px 1px 2px 1px #E4E4E6;
+}
+
+.total {
+	text-align: right;
+	padding-right: 4.15rem;
+}
+
 /*FOOTER*/
 
 .footer {
 	background-color: steelblue;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 .footer-text {
