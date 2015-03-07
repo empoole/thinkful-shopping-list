@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	var totalPrice = 0;
 
 	$('#add-item-reset').click(function(event) {
 		event.preventDefault();
@@ -10,13 +9,15 @@ $(document).ready(function() {
 		event.preventDefault();
 		var itemName = $('#item').val(),
 			itemQuantity = parseInt($('#quantity').val(), 10),
-			itemPrice = parseInt($('#price').val().replace(/\$|,/g,''), 10);
+			itemPrice = Math.floor(parseFloat($('#price').val().replace(/\$|,/g,''), 10) * 100) / 100;
 		var priceProduct = itemQuantity * itemPrice;
+		
 		//Make sure all values are appropriate
-		if(isNaN(totalPrice)) {
+		if(isNaN(priceProduct)) {
 			alert("Please enter a valid number.");
 			return;
 		}
+
 		//add the item to the list
 		$('.list').append('<li>' +
 					'<div class="shopping-list-item">' +
@@ -26,21 +27,31 @@ $(document).ready(function() {
 						'<p class="item-total-price">$' + priceProduct + '</p>' +
 					'</div>' +
 				'</li>');
-		totalPrice += priceProduct;
-		$('.total').text('Total: $' + totalPrice);
+		printTotal();
 		resetAddItem();
-	});
-
-	$('.button-remove-item').click(function(event) {
-		event.preventDefault();
-		console.log("asdgasdg");
-		$(this).parent().parent().remove();
+	
+		$('.button-remove-item').click(function(event) {
+			event.preventDefault();
+			$(this).parent().parent().remove();
+			printTotal();
+		});
 	});
 });
 
 
 function resetAddItem() {
 	$('#item').val("");
-	$('#price').val("");
-	$('#quantity').val("");
+	$('#price').val("0");
+	$('#quantity').val("0");
+}
+
+function printTotal() {
+	var total = 0;
+	$('.list').children().each(function() {
+		console.log("Total pre-calculation: " + total);
+		total += parseFloat($(this).find('.item-total-price').text().replace(/\$/g,''));
+		console.log("Total post-calculation: " + total);
+	});
+	console.log("Total out: " + total);
+	$('.total').text('Total: $' + total);
 }

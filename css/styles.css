@@ -17,6 +17,7 @@ ul {
 .header-text {
 	color: #FBFBFB;
 	font-size: 3em;
+	text-shadow: 0px 3px #6ABCF5;
 }
 
 .section-heading,
@@ -82,6 +83,12 @@ ul {
 	color: white;
 	border: none;
 	border-radius: 5px;
+}
+
+.button-add:focus,
+.button-reset:focus,
+.button-remove-item:focus {
+	outline:0;
 }
 
 .button-reset,
