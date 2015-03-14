@@ -17,6 +17,7 @@ ul {
 .header-text {
 	color: #FBFBFB;
 	font-size: 3em;
+	text-shadow: 0px 3px #6ABCF5;
 }
 
 .section-heading,
@@ -26,11 +27,11 @@ ul {
 
 .content-wrapper {
 	width: 60%;
-	height: 650px;
+	height: 500px;
 	margin: auto;
 	background-color: #FBFBFB;
 	border-radius: 5px;
-
+	box-shadow: 0px 1px 2px 2px #3F6C8C;
 }
 
 .align-left,
@@ -84,6 +85,12 @@ ul {
 	border-radius: 5px;
 }
 
+.button-add:focus,
+.button-reset:focus,
+.button-remove-item:focus {
+	outline:0;
+}
+
 .button-reset,
 .button-add {
 	width: 100px;
@@ -130,7 +137,8 @@ ul {
 .list {
 	margin: auto;
 	padding: 0 10px;
-
+	overflow-y: scroll;
+	max-height: 300px;
 }
 
 .shopping-list-item p,
