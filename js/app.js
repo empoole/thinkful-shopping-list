@@ -10,7 +10,7 @@ $(document).ready(function() {
 		var itemName = $('#item').val(),
 			itemQuantity = parseInt($('#quantity').val(), 10),
 			itemPrice = Math.floor(parseFloat($('#price').val().replace(/\$|,/g,''), 10) * 100) / 100;
-		var priceProduct = itemQuantity * itemPrice;
+		var priceProduct = (itemQuantity * itemPrice).toFixed(2);
 		
 		//Make sure all values are appropriate
 		if(isNaN(priceProduct)) {
@@ -22,7 +22,7 @@ $(document).ready(function() {
 		$('.list').append('<li>' +
 					'<div class="shopping-list-item">' +
 						'<p class="item-name">' + itemName + '</p>' +
-						'<p class="item-quantity">x' + itemQuantity + '</p>' +
+						'<p class="item-quantity">&ensp;x' + itemQuantity + '</p>' +
 						'<button class="button-remove-item">X</button>' +
 						'<p class="item-total-price">$' + priceProduct + '</p>' +
 					'</div>' +
@@ -36,6 +36,8 @@ $(document).ready(function() {
 			printTotal();
 		});
 	});
+
+
 });
 
 
@@ -48,10 +50,7 @@ function resetAddItem() {
 function printTotal() {
 	var total = 0;
 	$('.list').children().each(function() {
-		console.log("Total pre-calculation: " + total);
 		total += parseFloat($(this).find('.item-total-price').text().replace(/\$/g,''));
-		console.log("Total post-calculation: " + total);
 	});
-	console.log("Total out: " + total);
-	$('.total').text('Total: $' + total);
+	$('.total').text('Total: $' + total.toFixed(2));
 }
